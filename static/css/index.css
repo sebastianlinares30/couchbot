@@ -1,0 +1,26 @@
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom right, #000000, #a16abd);
+}
+
+.store-selector-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .1);
+    width: 300px;
+    padding: 40px 30px; /* 40px top/bottom 30px left/right */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    outline: .5px solid rgba(255, 179, 218, .2);
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.store-selector-container #start-button {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-top: 15px;
+}

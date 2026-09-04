@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>couchbot - Brain Dead</title>
+    <link rel="stylesheet" href="/static/css/brain-dead.css">
+</head>
+<body>
+    <a href="/" class="store-selector-link">Store Selector</a>
+    
+    <form class="select-item-form" id="item-form">
+        <h1>Item Information</h1>
+
+        <label for="item-name">Item Name:</label>
+        <input type="text" id="item-name" name="item-name" required>
+
+        <label for="size">Size:</label>
+        <select id="size-selector">
+            <option value="" disabled selected>-</option>
+            <option value="xxsmall">XXS</option>
+            <option value="xsmall">XS</option>
+            <option value="small">S</option>
+            <option value="medium">M</option>
+            <option value="large">L</option>
+            <option value="xlarge">XL</option>
+            <option value="xxlarge">XXL</option>
+        </select>
+
+        <button id="next-to-checkout" type="button">Next</button>
+    </form>
+
+    <form class="customer-checkout-form" id="checkout-form">
+        <h1>Checkout Information</h1>
+
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required>
+
+        <label for="shipping-address">Shipping Address:</label>
+        <input type="text" id="shipping-address" name="shipping-address" required>
+
+        <label for="shipping-address-apartment">Apt:</label>
+        <input type="text" id="shipping-address-apartment" name="shipping-address-apartment" required>
+
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" required>
+        
+        <label for="zip">Zip:</label>
+        <input type="text" id="zip" name="zip" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"required>
+
+        <div class="button-container">
+            <button id="back-to-item" type="button">Back</button>
+            <button id="next-to-card" type="button">Next</button>
+        </div>
+    </form>
+
+    <form class="card-information-form" id="card-form">
+        <h1>Card Information</h1>
+
+        <label for="billing-first-name">First Name:</label>
+        <input type="text" id="billing-first-name" name="billing-first-name" required>
+
+        <label for="billing-last-name">Last Name:</label>
+        <input type="text" id="billing-last-name" name="billing-last-name" required>
+
+        <label for="billing-address">Billing Address:</label>
+        <input type="text" id="billing-address" name="billing-address" required>
+
+        <label for="billing-address-apartment">Apt:</label>
+        <input type="text" id="billing-address-apartment" name="billing-address-apartment" required>
+
+        <label for="billing-state">State:</label>
+        <input type="text" id="billing-state" name="billing-state" required>
+        
+        <label for="billing-zip">Zip:</label>
+        <input type="text" id="zip" name="billing-zip" required>
+
+        <label for="card-number">Card Number:</label>
+        <input type="tel" id="card-number" name="card-number" required>
+
+        <label for="card-expiration">Card Expiration:</label>
+        <input type="text" id="card-expiration" name="card-expiration" required>
+
+        <label for="card-security">CVC:</label>
+        <input type="text" id="card-security" name="card-security" required>
+
+        <div class="button-container">
+            <button id="back-to-checkout" type="button">Back</button>
+            <button id="submit-button" type="button">Submit</button>
+        </div>
+    </form>
+
+    <script src="/static/js/brain-dead.js"></script>
+</body>
+</html>
