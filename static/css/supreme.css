@@ -63,11 +63,16 @@ body {
     grid-column: 1 / -1;
 }
 
+.card-information-form p {
+    grid-column: 1 / -1;
+    font-weight: bold;
+}
+
 .card-information-form {
     display: none;
     grid-template-columns: auto 1fr;
     background-color: rgba(255, 255, 255, 0.1);
-    width: 330px;
+    width: 390px;
     padding: 150px 45px; /* 150px top/bottom 45px left/right */
     border-radius: 10px;
     column-gap: 12px;

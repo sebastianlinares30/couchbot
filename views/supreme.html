@@ -12,19 +12,39 @@
     <form class="select-item-form" id="item-form">
         <h1>Item Information</h1>
 
+        <label for="type">Type:</label>
+        <select id="type-selector">
+            <option value="" disabled selected>-</option>
+            <option value="jackets">jackets</option>
+            <option value="shirts">shirts</option>
+            <option value="tops">tops/sweaters</option>
+            <option value="sweatshirts">sweatshirts</option>
+            <option value="pants">pants</option>
+            <option value="shorts">shorts</option>
+            <option value="hats">hats</option>
+            <option value="bags">bags</option>
+            <option value="accessories">accessories</option>
+            <option value="shoes">shoes</option>
+            <option value="skate">skate</option>
+        </select>
+
+
         <label for="item-name">Item Name:</label>
         <input type="text" id="item-name" name="item-name" required>
+
+        <label for="item-color">Color:</label>
+        <input type="text" id="item-color" name="item-color" required>
 
         <label for="size">Size:</label>
         <select id="size-selector">
             <option value="" disabled selected>-</option>
-            <option value="xxsmall">XXS</option>
-            <option value="xsmall">XS</option>
-            <option value="small">S</option>
-            <option value="medium">M</option>
-            <option value="large">L</option>
-            <option value="xlarge">XL</option>
-            <option value="xxlarge">XXL</option>
+            <option value="xxsmall">XXSmall</option>
+            <option value="xsmall">XSmall</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            <option value="xlarge">XLarge</option>
+            <option value="xxlarge">XXLarge</option>
         </select>
 
         <button id="next-to-checkout" type="button">Next</button>
@@ -43,7 +63,7 @@
         <input type="text" id="shipping-address" name="shipping-address" required>
 
         <label for="shipping-address-apartment">Apt:</label>
-        <input type="text" id="shipping-address-apartment" name="shipping-address-apartment" required>
+        <input type="text" id="shipping-address-apartment" name="shipping-address-apartment">
 
         <label for="state">State:</label>
         <input type="text" id="state" name="state" required>
@@ -54,6 +74,9 @@
         <label for="email">Email:</label>
         <input type="email" id="email" name="email"required>
 
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone"required>
+
         <div class="button-container">
             <button id="back-to-item" type="button">Back</button>
             <button id="next-to-card" type="button">Next</button>
@@ -62,24 +85,10 @@
 
     <form class="card-information-form" id="card-form">
         <h1>Card Information</h1>
+        <p>Billing address must be the same as shipping address</p>
 
-        <label for="billing-first-name">First Name:</label>
+        <label for="billing-name">Name on Card:</label>
         <input type="text" id="billing-first-name" name="billing-first-name" required>
-
-        <label for="billing-last-name">Last Name:</label>
-        <input type="text" id="billing-last-name" name="billing-last-name" required>
-
-        <label for="billing-address">Billing Address:</label>
-        <input type="text" id="billing-address" name="billing-address" required>
-
-        <label for="billing-address-apartment">Apt:</label>
-        <input type="text" id="billing-address-apartment" name="billing-address-apartment" required>
-
-        <label for="billing-state">State:</label>
-        <input type="text" id="billing-state" name="billing-state" required>
-        
-        <label for="billing-zip">Zip:</label>
-        <input type="text" id="zip" name="billing-zip" required>
 
         <label for="card-number">Card Number:</label>
         <input type="tel" id="card-number" name="card-number" required>
@@ -87,7 +96,7 @@
         <label for="card-expiration">Card Expiration:</label>
         <input type="text" id="card-expiration" name="card-expiration" required>
 
-        <label for="card-security">CVC:</label>
+        <label for="card-security">Security Code:</label>
         <input type="text" id="card-security" name="card-security" required>
 
         <div class="button-container">
