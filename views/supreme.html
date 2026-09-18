@@ -9,9 +9,9 @@
 <body>
     <a href="/index" class="store-selector-link">Store Selector</a>
     
+    <!-- Step 1: Item Configuration Form -->
     <form class="select-item-form" id="item-form">
         <h1>Item Information</h1>
-
         <label for="type">Type:</label>
         <select id="type-selector">
             <option value="" disabled selected>-</option>
@@ -38,18 +38,19 @@
         <label for="size">Size:</label>
         <select id="size-selector">
             <option value="" disabled selected>-</option>
-            <option value="xxsmall">XXSmall</option>
-            <option value="xsmall">XSmall</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-            <option value="xlarge">XLarge</option>
-            <option value="xxlarge">XXLarge</option>
+            <option value="XXSmall">XXSmall</option>
+            <option value="XSmall">XSmall</option>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+            <option value="XLarge">XLarge</option>
+            <option value="XXLarge">XXLarge</option>
         </select>
 
         <button id="next-to-checkout" type="button">Next</button>
     </form>
 
+    <!-- Step 2: Customer Shipping Information Form -->
     <form class="customer-checkout-form" id="checkout-form">
         <h1>Checkout Information</h1>
 
@@ -64,6 +65,9 @@
 
         <label for="shipping-address-apartment">Apt:</label>
         <input type="text" id="shipping-address-apartment" name="shipping-address-apartment">
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city">
 
         <label for="state">State:</label>
         <input type="text" id="state" name="state" required>
@@ -83,6 +87,7 @@
         </div>
     </form>
 
+    <!-- Step 3: Card and Billing Information Form -->
     <form class="card-information-form" id="card-form">
         <h1>Card Information</h1>
         <p>Billing address must be the same as shipping address</p>
