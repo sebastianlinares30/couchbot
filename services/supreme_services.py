@@ -47,15 +47,15 @@ class SupremeService:
         driver = webdriver.Chrome()
 
         try:
-            self._open_store_and_navigate(driver)
-            self._select_and_add_item(driver)
-            self._fill_shipping_details(driver)
-            self._fill_payment_details(driver)
-            self._finalize_and_close(driver)
+            self.store_navigation(driver)
+            self.add_item(driver)
+            self.shipping_details(driver)
+            self.payment_details(driver)
+            self.close_driver(driver)
         finally:
             driver.quit()
 
-    def _open_store_and_navigate(self, driver):
+    def store_navigation(self, driver):
         """
         Launches the browser, loads the base URL, and navigates through to the all product view.
         """
@@ -71,7 +71,7 @@ class SupremeService:
             EC.element_to_be_clickable((By.LINK_TEXT, "view all"))
         ).click()
 
-    def _select_and_add_item(self, driver):
+    def add_item(self, driver):
         """
         Filters by item category, finds specific product, and matches color/size.
         Adds the item to the cart and clicks through to the checkout page.
@@ -110,7 +110,7 @@ class SupremeService:
             EC.element_to_be_clickable((By.LINK_TEXT, "checkout now"))
         ).click()
 
-    def _fill_shipping_details(self, driver):
+    def shipping_details(self, driver):
         """
         Fills in all required customer information, contact information, and shipping address.
         """
@@ -153,7 +153,7 @@ class SupremeService:
             EC.presence_of_element_located((By.NAME, "phone"))
         ).send_keys(self.phone)
 
-    def _fill_payment_details(self, driver):
+    def payment_details(self, driver):
         """
         Iterates through payment iframes (card number, expiration, security code, and name) to input billing details.
         """
@@ -204,7 +204,7 @@ class SupremeService:
         ).send_keys(self.card_name)
         driver.switch_to.default_content()
 
-    def _finalize_and_close(self, driver):
+    def close_driver(self, driver):
         """
         Pauses briefly to let final transactions register and safely terminates the browser session.
         """
